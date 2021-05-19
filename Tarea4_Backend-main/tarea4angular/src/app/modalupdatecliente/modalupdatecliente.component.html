@@ -1,0 +1,28 @@
+<h1 mat-dialog-title>Editar Cliente</h1>
+<div mat-dialog-content>
+    <form class="theme-form" [formGroup]="form">
+        <div>
+            <mat-form-field>
+                <mat-label>Nombre</mat-label>
+                <input matInput formControlName="name" [(ngModel)]="cliente.name">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Ciudad</mat-label>
+                <input matInput formControlName="cityName" [(ngModel)]="cliente.cityName">
+              </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field>
+                <mat-label>Número Telefónico</mat-label>
+                <input matInput formControlName="phoneNumber" [(ngModel)]="cliente.phoneNumber">
+              </mat-form-field>
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="cancelar()">Cancelar</button>
+  <button mat-button  [disabled]="!form.valid" (click)="editarCliente()" cdkFocusInitial>Guardar</button>
+</div>
+

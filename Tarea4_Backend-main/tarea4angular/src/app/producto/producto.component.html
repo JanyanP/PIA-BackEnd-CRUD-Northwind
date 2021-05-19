@@ -1,0 +1,40 @@
+<button type="button" style="background-color: green;" class="btn btn-dark" (click)="openmodal()">Agregar Producto  <i class="fa fa-plus"></i></button>
+
+<div>
+    <mat-card>
+        <table mat-table [dataSource]="Productos" class="mat-elevation-z8" #tabla1>
+            <ng-container matColumnDef="idNumber">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let Producto"> {{Producto.idNumber}} </td>
+            </ng-container>
+            <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Nombre </th>
+                <td mat-cell *matCellDef="let Producto"> {{Producto.name}} </td>
+            </ng-container>
+            <ng-container matColumnDef="price">
+                <th mat-header-cell *matHeaderCellDef> Precio </th>
+                <td mat-cell *matCellDef="let Producto"> {{Producto.price}} </td>
+            </ng-container>
+            <ng-container matColumnDef="stock">
+                <th mat-header-cell *matHeaderCellDef>Stock</th>
+                <td mat-cell *matCellDef="let Producto"> {{Producto.stock}} </td>
+            </ng-container>
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+              <td mat-cell *matCellDef="let Producto;" (click)="eliminar(Producto.idNumber)" >
+                <i   class="far fa-trash-alt" style="color:red"></i>
+              </td>
+          </ng-container>
+          <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef>Editar</th>
+            <td mat-cell *matCellDef="let Producto;" (click)="openmodalEditar(Producto)" >
+              <i class="fas fa-edit" style="color: skyblue;"></i>
+            </td>
+        </ng-container>
+            <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+            <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+        </table>
+    </mat-card>
+
+</div>
+<router-outlet></router-outlet>
