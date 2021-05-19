@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "3297a655-423b-4f4f-8718-1319bb896b9e",
+		"name": "PIA BackEnd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Product/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Product",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Product/7",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Product",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add One",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Pepsi\",\r\n  \"price\": 18,\r\n  \"stock\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Product",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Product"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Coca Cola\",\r\n  \"price\": 18,\r\n  \"stock\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Product/82",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Product",
+								"82"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Employee",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Employee/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Employee/2",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Employee",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add One",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Brayan\",\r\n  \"familyName\": \"Montoya\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Employee",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Employee"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"FCFM\",\r\n  \"familyName\": \"UANL\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Employee/15",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Employee",
+								"15"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get One",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Customer/BOLID",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Customer",
+								"BOLID"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete One",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:44332/api/Customer/OK",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Customer",
+								"OK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add One",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idString\": \"OKAY\",\r\n  \"name\": \"Totoya\",\r\n  \"cityName\": \"Canada\",\r\n  \"phoneNumber\": \"81-1232-2921\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update One",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Comidad Rapidas de Mexico\",\r\n  \"cityName\": \"JAPAN\",\r\n  \"phoneNumber\": \"39847328\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:44332/api/Customer/BOLID",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "44332",
+							"path": [
+								"api",
+								"Customer",
+								"BOLID"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
