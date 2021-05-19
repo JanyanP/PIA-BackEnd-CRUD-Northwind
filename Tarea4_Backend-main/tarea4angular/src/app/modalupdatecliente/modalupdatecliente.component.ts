@@ -12,7 +12,7 @@ import { CatalogsService} from '../services/catalog.service';
 export class ModalupdateclienteComponent implements OnInit {
   cliente: Cliente = {} as Cliente;
   form: FormGroup;
-  constructor(public catalog: CatalogsService, public forbuilder : FormBuilder,public dialogRef: MatDialogRef<ModalclienteComponent>)
+  constructor(public catalog: CatalogsService, public forbuilder : FormBuilder,public dialogRef: MatDialogRef<ModalupdateclienteComponent>)
   {
     this.form = forbuilder.group({
       name : ['',Validators.compose([Validators.required])],
