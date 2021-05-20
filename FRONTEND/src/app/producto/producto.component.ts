@@ -21,21 +21,24 @@ export class ProductoComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Cada que se muestra la página, se cargan los datos, siempre se están actualizando 
     this.cargardatos();
   }
-
+ // Método para cargar los datos de cada registro de cada tabla, se manda llamar un servicio del tipo get
   cargardatos(){
     this.catalog.getProducto().subscribe(productoslist=>{
       console.log(productoslist);
       this.Productos= productoslist;
     })
   }
+  //Método para eliminar algun registro dado su id, se manda llamar un servicio del tipo delete
   eliminar(id:number){
     this.catalog.deleteproducto(id).subscribe(d =>{
       this.cargardatos();
 
     })
   }
+  //Método que abre el modal del producto en donde se manda a llamar el modalproducto para agregar un nuevo producto. 
   openmodal(): void {
     const dialogRef = this.dialog.open(ModalproductoComponent, {
       width: '300px',
@@ -47,7 +50,7 @@ export class ProductoComponent implements OnInit {
       this.cargardatos();
     });
   }
-
+//Método que abre el modal de actualizar para cada producto, se manda llamar un servicio del tipo put.
   openmodalEditar(producto: Producto): void {
     const dialogRef = this.dialog.open(ModalupdateproductoComponent, {
       width: '300px',

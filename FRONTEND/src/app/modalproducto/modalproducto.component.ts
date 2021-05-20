@@ -12,6 +12,7 @@ export class ModalproductoComponent implements OnInit {
   form: FormGroup; 
   constructor(public catalog: CatalogsService, public forbuilder : FormBuilder,public dialogRef: MatDialogRef<ModalproductoComponent>)
   {
+    // Se crea una forma en donde guarda la información de cada producto
     this.form = forbuilder.group({
       idNumber:[0,Validators.compose([Validators.required])],
       name : ['',Validators.compose([Validators.required])],
@@ -25,6 +26,7 @@ export class ModalproductoComponent implements OnInit {
   cancelar(): void {
     this.dialogRef.close();
   }
+  //Método para agregar un nuevo producto, se manda a llamar a un servicio post
   agregarProducto(){
     const producto = this.form.value;
     this.catalog.addProducto(producto).subscribe(c=> {

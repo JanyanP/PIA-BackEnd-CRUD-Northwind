@@ -14,6 +14,7 @@ export class ModalupdateclienteComponent implements OnInit {
   form: FormGroup;
   constructor(public catalog: CatalogsService, public forbuilder : FormBuilder,public dialogRef: MatDialogRef<ModalupdateclienteComponent>)
   {
+    // Se crea una forma en donde guarda la información de cada cliente
     this.form = forbuilder.group({
       name : ['',Validators.compose([Validators.required])],
       cityName:['',Validators.compose([Validators.required])],
@@ -26,6 +27,7 @@ export class ModalupdateclienteComponent implements OnInit {
   cancelar(): void {
     this.dialogRef.close();
   }
+  //Método para editar un cliente, se manda a llamar a un servicio put 
   editarCliente(){
     const cliente = this.cliente;
     this.catalog.updateCliente(cliente).subscribe((cliente)=> {

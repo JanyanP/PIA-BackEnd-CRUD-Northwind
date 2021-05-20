@@ -12,6 +12,7 @@ export class ModalclienteComponent implements OnInit {
   form: FormGroup; 
   constructor(public catalog: CatalogsService, public forbuilder : FormBuilder,public dialogRef: MatDialogRef<ModalclienteComponent>) 
   {
+    // Se crea una forma en donde guarda la información de cada cliente
     this.form = forbuilder.group({
       idString:['',Validators.compose([Validators.required])],
       name : ['',Validators.compose([Validators.required])],
@@ -25,6 +26,7 @@ export class ModalclienteComponent implements OnInit {
   cancelar(): void {
     this.dialogRef.close();
   }
+  //Método para agregar un nuevo cliente, se manda a llamar a un servicio post 
   agregarCliente(){
     const cliente = this.form.value;
     this.catalog.addCliente(cliente).subscribe(c=> {

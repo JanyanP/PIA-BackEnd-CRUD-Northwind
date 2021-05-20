@@ -14,6 +14,7 @@ export class ModalempleadoComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<ModalempleadoComponent>,
     public formBuilder: FormBuilder , public catalog: CatalogsService)
     {
+      // Se crea una forma en donde guarda la información de cada empleado
       this.form = formBuilder.group({
         idNumber :[0,Validators.compose([Validators.required])],
         name: ['',Validators.compose([Validators.required])],
@@ -22,7 +23,7 @@ export class ModalempleadoComponent implements OnInit {
       })
     }
 
-
+    //Método para agregar un nuevo empleado, se manda a llamar a un servicio post 
     agregarEmpleado(){
       const empeladoform = this.form.value;
       console.log(empeladoform)
@@ -31,6 +32,7 @@ export class ModalempleadoComponent implements OnInit {
 
       })
     }
+    //Método para cancelar el añadir un nuevo empleado 
     cancelar(): void {
       this.dialogRef.close();
     }

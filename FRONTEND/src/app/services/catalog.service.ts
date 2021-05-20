@@ -1,7 +1,5 @@
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-
-
 import { APP_CONFIG, AppConfig } from "../app.config";
 
 
@@ -12,7 +10,9 @@ export class CatalogsService {
   constructor(public http: HttpClient,
     @Inject(APP_CONFIG) private config: AppConfig,
   ) {}
-
+    //Se declaran los metodos que brindaran el servicio a cada una de las funciones necesarias para cada requerimiento,
+    //como lo son get, para mostrar los datos de cada tabla, delete para borrar algun registro de cada tabla, 
+    // post para agregar un nuevo registro en cada tabla y put para actualizar algun registro. 
     getEmpleados() {
         return this.http.get<Empleado[]>(`${this.config.apiEndpoint}/api/Employee` );
     }

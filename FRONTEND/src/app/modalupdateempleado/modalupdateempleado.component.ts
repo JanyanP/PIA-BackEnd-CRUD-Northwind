@@ -15,13 +15,14 @@ export class ModalupdateempleadoComponent implements OnInit {
   constructor(public dialogRef: MatDialogRef<ModalupdateempleadoComponent>,
     public formBuilder: FormBuilder , public catalog: CatalogsService) {
       this.form = formBuilder.group({
+        // Se crea una forma en donde guarda la información de cada empleado
         idNumber :[0,Validators.compose([Validators.required])],
         name: ['',Validators.compose([Validators.required])],
         familyName: ['',Validators.compose([Validators.required])]
 
       })
     }
-
+//Método para editar un empleador, se manda a llamar a un servicio put 
   editarEmpleado(){
     const empleadoform = this.empleado;
       console.log(empleadoform)
