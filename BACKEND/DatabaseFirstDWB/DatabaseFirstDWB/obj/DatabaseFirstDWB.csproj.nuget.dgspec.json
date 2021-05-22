@@ -1,21 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\braya\\Documents\\FCFM\\6to Semestre\\Back-End\\Tarea4_Backend-main\\Tarea4_Backend-main\\Tarea3_BackEnd-main\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj": {}
+    "C:\\Users\\desti\\OneDrive\\FCFM\\6to Semestre\\BCKEND\\PIA-Back-End\\BACKEND\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\braya\\Documents\\FCFM\\6to Semestre\\Back-End\\Tarea4_Backend-main\\Tarea4_Backend-main\\Tarea3_BackEnd-main\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj": {
+    "C:\\Users\\desti\\OneDrive\\FCFM\\6to Semestre\\BCKEND\\PIA-Back-End\\BACKEND\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\braya\\Documents\\FCFM\\6to Semestre\\Back-End\\Tarea4_Backend-main\\Tarea4_Backend-main\\Tarea3_BackEnd-main\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj",
+        "projectUniqueName": "C:\\Users\\desti\\OneDrive\\FCFM\\6to Semestre\\BCKEND\\PIA-Back-End\\BACKEND\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj",
         "projectName": "DatabaseFirstDWB",
-        "projectPath": "C:\\Users\\braya\\Documents\\FCFM\\6to Semestre\\Back-End\\Tarea4_Backend-main\\Tarea4_Backend-main\\Tarea3_BackEnd-main\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj",
-        "packagesPath": "C:\\Users\\braya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\braya\\Documents\\FCFM\\6to Semestre\\Back-End\\Tarea4_Backend-main\\Tarea4_Backend-main\\Tarea3_BackEnd-main\\DatabaseFirstDWB\\DatabaseFirstDWB\\obj\\",
+        "projectPath": "C:\\Users\\desti\\OneDrive\\FCFM\\6to Semestre\\BCKEND\\PIA-Back-End\\BACKEND\\DatabaseFirstDWB\\DatabaseFirstDWB\\DatabaseFirstDWB.csproj",
+        "packagesPath": "C:\\Users\\desti\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\desti\\OneDrive\\FCFM\\6to Semestre\\BCKEND\\PIA-Back-End\\BACKEND\\DatabaseFirstDWB\\DatabaseFirstDWB\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\braya\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\desti\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -70,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

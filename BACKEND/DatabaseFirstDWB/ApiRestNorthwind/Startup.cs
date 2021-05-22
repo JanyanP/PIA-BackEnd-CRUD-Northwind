@@ -30,7 +30,7 @@ namespace ApiRestNorthwind
         {
             services.AddControllers();
 
-
+            //SE AGREGAN LOS COORS PARA QUE NOS DE ACCESO A LA INFORMACION EN NUSTRO FRONTEND
             services.AddCors(options => options.AddPolicy("AllowWebApp", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
             services.AddSwaggerGen(c =>
             {
