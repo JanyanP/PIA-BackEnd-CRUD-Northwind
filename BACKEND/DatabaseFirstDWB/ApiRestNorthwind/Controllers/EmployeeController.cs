@@ -19,7 +19,7 @@ namespace ApiRestNorthwind.Controllers
     {
         // GET: api/<EmployeeController>
         [HttpGet]
-        public List<EmployeeModel> Get()
+        public List<EmployeeModel> Get() //Obtiene una lista de los empleados
         {
             var employees = new EmployeeSC().GetAllEmployees().Select(s => new EmployeeModel
             {
@@ -31,13 +31,14 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // GET api/<EmployeeController>/5
+        // Busca una instancia de la tabla empleados por un id
         [HttpGet("{id}")]
         public EmployeeModel Get(int id)
         {
             var employee = new EmployeeSC().GetEmployeeById(id);
             var employeeModel = new EmployeeModel();
-            try
-            {
+            try // Como el metodo GetEmployeerById devuelve un null si no lo encuentra se puso en un try catch
+            {   // ya que el EmployeeModel no acepta datos nulos
                 employeeModel.IdNumber = employee.EmployeeId;
                 employeeModel.Name = employee.FirstName;
                 employeeModel.FamilyName = employee.LastName;
@@ -52,6 +53,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // POST api/<EmployeeController>
+        // Agrega una instancia de empleado a la tala Employee
         [HttpPost]
         public void Post([FromBody] EmployeeModel newEmployee)
         {
@@ -60,6 +62,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // PUT api/<EmployeeController>/5
+        // Actualiza una instancia de la tabla Employee
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] EmployeeModel employee)
         {
@@ -67,6 +70,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // DELETE api/<EmployeeController>/5
+        // Elimina una instancia de la tabla Employee por id
         [HttpDelete("{id}")]
         public void Delete(int id)
         {

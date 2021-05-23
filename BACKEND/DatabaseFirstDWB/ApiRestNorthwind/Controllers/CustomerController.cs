@@ -16,10 +16,11 @@ namespace ApiRestNorthwind.Controllers
     {
         // GET: api/<CustomerController>
         [HttpGet]
-        public List<CustomerModel> Get()
+        public List<CustomerModel> Get() // Obtiene todos los clientes en una lista
         {
             var customers = new CustomerSC().GetAllCustomers().Select(s => new CustomerModel
             {
+                // Por seguridad pasa los datos a otro modelo, para que no tengan los nombres de los atributos de la db
                 idString = s.CustomerId,
                 name = s.CompanyName,
                 cityName = s.City,
@@ -31,12 +32,13 @@ namespace ApiRestNorthwind.Controllers
 
         // GET api/<CustomerController>/5
         [HttpGet("{id}")]
+        // Obtiene un cliente por su id
         public CustomerModel Get(string id)
         {
             var customer = new CustomerSC().GetCustomerById(id);
             var customerModel = new CustomerModel();
-            try 
-            {
+            try // Como el metodo GetCustomerById devuelve un null si no lo encuentra se puso en un try catch
+            {   // ya que el customerModel no acepta datos nulos
                 customerModel.idString = customer.CustomerId;
                 customerModel.name = customer.CompanyName;
                 customerModel.cityName = customer.City;
@@ -54,13 +56,14 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // POST api/<CustomerController>
+        // Agrega un cliente a la base de datos
         [HttpPost]
         public void Post([FromBody] CustomerModel newCustomer)
         {
             new CustomerSC().AddCustomer(newCustomer);
         }
-
         // PUT api/<CustomerController>/5
+        // Actualiza una instancia de la tabla Customers con los parámetros que se le envien
         [HttpPut("{id}")]
         public void Put(string id, [FromBody] CustomerModel customer)
         {
@@ -68,6 +71,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // DELETE api/<CustomerController>/5
+        // Elimina una instancia de la tabla cliente de la base de datos
         [HttpDelete("{id}")]
         public void Delete(string id)
         {

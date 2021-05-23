@@ -16,11 +16,13 @@ namespace ApiRestNorthwind.Controllers
     public class ProductController : ControllerBase
     {
         // GET: api/<ProductController>
+        // Obtiene una lista de todos los produtos
         [HttpGet]
         public List<ProductModel> Get()
         {
             var products = new ProductSC().GetAllProducts().Select(s => new ProductModel
             {
+                // pasa algunos datos de la clase products a un productModel para no mostrar los nombres de los atributos
                 idNumber = s.ProductId,
                 Name = s.ProductName,
                 Price = (decimal)s.UnitPrice,
@@ -30,13 +32,14 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // GET api/<ProductController>/5
+        // Obtiene una instancia de Product por id
         [HttpGet("{id}")]
         public ProductModel Get(int id)
         {
             var product = new ProductSC().GetProductById(id);
             var productModel = new ProductModel();
-            try
-            {
+            try // Como el metodo GetProductById devuelve un null si no lo encuentra se puso en un try catch
+            {   // ya que el ProductModel no acepta datos nulos
                 productModel.idNumber = product.ProductId;
                 productModel.Name = product.ProductName;
                 productModel.Price = (decimal)product.UnitPrice;
@@ -54,6 +57,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // POST api/<ProductController>
+        // Incerta una instancia de la tabla Product
         [HttpPost]
         public void Post([FromBody] ProductModel newProduct)
         {
@@ -61,6 +65,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // PUT api/<ProductController>/5
+        // Actualiza una instancia de la tabla Product
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] ProductModel product)
         {
@@ -68,6 +73,7 @@ namespace ApiRestNorthwind.Controllers
         }
 
         // DELETE api/<ProductController>/5
+        // Busca y elimina una instancia de la tabla product
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
