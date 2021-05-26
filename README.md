@@ -5,6 +5,7 @@
 **Alberto Carlos Almaguer Rodríguez 1877448**
 **Destiny Yareli de la Fuente Aguilar 1855184**
 **Eduardo Alan Hernandez Villasana 1941416**
+**Brayan Adrian Montoya Morales 1847284**
 
 **TECNOLOGÍAS INVOLUCRADAS**
 
